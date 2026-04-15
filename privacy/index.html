@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HatchMate — Politique de confidentialité / Privacy Policy</title>
+  <style>
+    :root {
+      --primary: #F4A028;
+      --bg: #FFF8E1;
+      --text: #3D2B1F;
+      --muted: #8B6E5A;
+      --card: #ffffff;
+      --border: #F0E0C8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .back { font-size: 20px; color: var(--muted); }
+    .lang-toggle { display: flex; gap: 8px; }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .page-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    p { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; line-height: 1.7; margin-bottom: 6px; }
+    .highlight {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .highlight p { margin: 0; font-weight: 600; }
+    .inline-fr, .inline-en { display: none; }
+    a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo-link" href="../">
+      <span class="back">‹</span>
+      HatchMate
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- FR -->
+    <div class="inline-fr">
+      <h1 class="page-title">Politique de confidentialité</h1>
+      <p class="last-updated">Dernière mise à jour : 15 avril 2025</p>
+
+      <div class="highlight">
+        <p>HatchMate ne collecte aucune donnée personnelle et ne transmet aucune information à des serveurs externes. Toutes vos données restent sur votre appareil.</p>
+      </div>
+
+      <h2>1. Qui sommes-nous?</h2>
+      <p>HatchMate est une application mobile éducative développée pour aider les utilisateurs à suivre l'incubation des œufs de poules. Cette politique de confidentialité décrit comment nous traitons vos informations.</p>
+
+      <h2>2. Données collectées</h2>
+      <p>HatchMate ne collecte <strong>aucune donnée personnelle</strong>. Les seules informations enregistrées sont :</p>
+      <ul>
+        <li>Le nom de vos couvées (saisi par vous)</li>
+        <li>Le nombre d'œufs et la date de début d'incubation</li>
+        <li>Vos préférences de langue</li>
+      </ul>
+      <p>Ces données sont stockées <strong>exclusivement sur votre appareil</strong>, dans une base de données locale (SQLite). Elles ne sont jamais transmises à nos serveurs ni à des tiers.</p>
+
+      <h2>3. Notifications</h2>
+      <p>Si vous activez les rappels, HatchMate utilise le service de notifications locales de votre appareil (pas de notifications push distantes). Ces notifications sont générées localement et ne transitent par aucun serveur externe.</p>
+
+      <h2>4. Données analytiques</h2>
+      <p>HatchMate ne collecte aucune donnée analytique, de diagnostic ou de comportement utilisateur. Nous n'utilisons aucun outil de suivi (Firebase, Mixpanel, etc.).</p>
+
+      <h2>5. Enfants</h2>
+      <p>HatchMate est une application familiale et éducative destinée à tous les âges, y compris les enfants. Conformément à cette vocation, nous ne collectons aucune donnée d'aucune nature, ce qui inclut les données concernant les mineurs.</p>
+
+      <h2>6. Partage des données</h2>
+      <p>Nous ne vendons, ne louons et ne partageons aucune donnée avec des tiers, car nous n'en collectons aucune.</p>
+
+      <h2>7. Modifications</h2>
+      <p>Nous pouvons mettre à jour cette politique occasionnellement. La date de dernière mise à jour sera toujours indiquée en haut de cette page. L'utilisation continue de l'application après toute modification constitue votre acceptation de la nouvelle politique.</p>
+
+      <h2>8. Contact</h2>
+      <p>Pour toute question relative à cette politique de confidentialité, contactez-nous à : <a href="mailto:contact@hatchmate.app">contact@hatchmate.app</a></p>
+    </div>
+
+    <!-- EN -->
+    <div class="inline-en">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="last-updated">Last updated: April 15, 2025</p>
+
+      <div class="highlight">
+        <p>HatchMate does not collect any personal data and does not transmit any information to external servers. All your data stays on your device.</p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>HatchMate is an educational mobile application designed to help users track egg incubation. This privacy policy describes how we handle your information.</p>
+
+      <h2>2. Data collected</h2>
+      <p>HatchMate collects <strong>no personal data</strong>. The only information stored is:</p>
+      <ul>
+        <li>The names of your clutches (entered by you)</li>
+        <li>The number of eggs and the start date of incubation</li>
+        <li>Your language preferences</li>
+      </ul>
+      <p>This data is stored <strong>exclusively on your device</strong>, in a local database (SQLite). It is never transmitted to our servers or to any third party.</p>
+
+      <h2>3. Notifications</h2>
+      <p>If you enable reminders, HatchMate uses your device's local notification service (not remote push notifications). These notifications are generated locally and do not pass through any external server.</p>
+
+      <h2>4. Analytics</h2>
+      <p>HatchMate does not collect any analytics, diagnostic, or user behavior data. We do not use any tracking tools (Firebase, Mixpanel, etc.).</p>
+
+      <h2>5. Children</h2>
+      <p>HatchMate is a family and educational application intended for all ages, including children. In keeping with this purpose, we collect no data of any kind, including data relating to minors.</p>
+
+      <h2>6. Data sharing</h2>
+      <p>We do not sell, rent, or share any data with third parties, as we collect none.</p>
+
+      <h2>7. Changes</h2>
+      <p>We may update this policy occasionally. The date of the last update will always be shown at the top of this page. Continued use of the app after any changes constitutes your acceptance of the new policy.</p>
+
+      <h2>8. Contact</h2>
+      <p>For any questions regarding this privacy policy, contact us at: <a href="mailto:contact@hatchmate.app">contact@hatchmate.app</a></p>
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+      });
+      document.querySelectorAll('.inline-fr, .inline-en').forEach(el => {
+        el.style.display = el.classList.contains('inline-' + lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('hm-lang', lang);
+    }
+    const saved = localStorage.getItem('hm-lang') || (navigator.language.startsWith('en') ? 'en' : 'fr');
+    setLang(saved);
+  </script>
+</body>
+</html>
