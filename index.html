@@ -201,7 +201,7 @@
         btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
       });
       document.querySelectorAll('.inline-fr, .inline-en').forEach(el => {
-        el.style.display = el.classList.contains('inline-' + lang) ? '' : 'none';
+        el.style.display = el.classList.contains('inline-' + lang) ? 'inline' : 'none';
       });
       document.getElementById('link-privacy').textContent =
         lang === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy';
