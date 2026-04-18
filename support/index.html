@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HatchMate — Support</title>
+  <style>
+    :root {
+      --primary: #F4A028;
+      --bg: #FFF8E1;
+      --text: #3D2B1F;
+      --muted: #8B6E5A;
+      --card: #ffffff;
+      --border: #F0E0C8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .back { font-size: 20px; color: var(--muted); }
+    .lang-toggle { display: flex; gap: 8px; }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+      text-align: center;
+    }
+    .support-icon {
+      font-size: 56px;
+      margin-bottom: 24px;
+    }
+    .page-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      margin-bottom: 32px;
+    }
+    .contact-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 14px;
+      transition: opacity 0.15s;
+    }
+    .contact-email:hover { opacity: 0.88; }
+    .note {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .inline-fr, .inline-en { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo-link" href="../">
+      <span class="back">‹</span>
+      HatchMate
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="support-icon">🐣</div>
+
+    <!-- FR -->
+    <div class="inline-fr">
+      <h1 class="page-title">Besoin d'aide ?</h1>
+      <p class="subtitle">Notre équipe est là pour vous aider. Écrivez-nous et nous vous répondrons dans les plus brefs délais.</p>
+      <div class="contact-card">
+        <p class="contact-label">Contactez-nous</p>
+        <a class="contact-email" href="mailto:support@agritrack.ca">
+          ✉️ support@agritrack.ca
+        </a>
+      </div>
+      <p class="note">Nous répondons généralement dans un délai de 1 à 2 jours ouvrables.</p>
+    </div>
+
+    <!-- EN -->
+    <div class="inline-en">
+      <h1 class="page-title">Need help?</h1>
+      <p class="subtitle">Our team is here for you. Send us a message and we'll get back to you as soon as possible.</p>
+      <div class="contact-card">
+        <p class="contact-label">Contact us</p>
+        <a class="contact-email" href="mailto:support@agritrack.ca">
+          ✉️ support@agritrack.ca
+        </a>
+      </div>
+      <p class="note">We typically respond within 1–2 business days.</p>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+      });
+      document.querySelectorAll('.inline-fr, .inline-en').forEach(el => {
+        el.style.display = el.classList.contains('inline-' + lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('hm-lang', lang);
+    }
+    const saved = localStorage.getItem('hm-lang') || (navigator.language.startsWith('en') ? 'en' : 'fr');
+    setLang(saved);
+  </script>
+</body>
+</html>

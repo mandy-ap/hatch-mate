@@ -184,6 +184,7 @@
     </section>
 
     <div class="legal-links">
+      <a href="support/" id="link-support">Support</a>
       <a href="privacy/" id="link-privacy">Politique de confidentialité</a>
       <a href="terms/" id="link-terms">Conditions d'utilisation</a>
     </div>
@@ -203,6 +204,7 @@
       document.querySelectorAll('.inline-fr, .inline-en').forEach(el => {
         el.style.display = el.classList.contains('inline-' + lang) ? 'inline' : 'none';
       });
+      document.getElementById('link-support').textContent = 'Support';
       document.getElementById('link-privacy').textContent =
         lang === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy';
       document.getElementById('link-terms').textContent =
